@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeWriter</title>
+    <style>
+        h1{
+            color: aliceblue;
+        }
+    </style>
+<body style="background:#222;" >
+</head>
+
+    <!-- Now add this effect on load page -->
+    <button onclick="myfun()" >
+        Start
+    </button>
+    <h1 id="textdemo">
+       
+    </h1>
+   
+
+    <script>
+        var i=0;
+        var text="Type Writer Effect With javascript " ;   var speed=80;
+
+        function  myfun(){
+         
+            if(i < text.length){
+                document.getElementById("textdemo")
+                .innerHTML +=text.charAt(i);
+                i++;
+                setTimeout(myfun,speed);
+            }
+
+        }
+
+        
+        </script>
+
+</body>
+</html>
